@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: "${GIT_BRANCH}", url: "${GIT_REPO}"
+                git clone: "${GIT_REPO}"
             }
         }
         
