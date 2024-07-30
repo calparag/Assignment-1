@@ -22,7 +22,7 @@ pipeline {
                     sh "docker pull ${DOCKER_IMAGE}"
 
                     // Run the Docker container and execute the Python script
-                    sh "docker run --rm -v $(pwd):/usr/src/app -w /usr/src/app ${DOCKER_IMAGE} python ${PYTHON_FILE}"
+                    sh "docker run --rm -v ${pwd}:/usr/src/app -w /usr/src/app ${DOCKER_IMAGE} python ${PYTHON_FILE}"
             }
         }
     }
